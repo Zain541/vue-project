@@ -1,11 +1,16 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+
+  import {useFlash} from '@/composables/useFlash';
+
+  let { flash } = useFlash();
+
+
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-
-    <!-- 'the' keyword means that it is a one time thing  -->
-  </main>
+ <div>
+  <p>
+    <button @click="flash('test', 'It works')">Click me</button>
+  </p>
+ </div>
 </template>
